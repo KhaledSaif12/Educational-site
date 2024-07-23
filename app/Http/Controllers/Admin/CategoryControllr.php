@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use App\Models\Catgory;
 use Illuminate\Http\Request;
@@ -25,6 +26,7 @@ class CategoryControllr extends Controller
         $catgory->name=$request->name;
         $catgory->description=$request->description;
         $catgory->parent=$request->parent;
+        $catgory->user_id=Auth::user()->id;
      
         if($catgory->save())
         return redirect()->route('all_category');
