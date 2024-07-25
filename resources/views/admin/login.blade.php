@@ -57,7 +57,7 @@
 						<div class="col-xl-4 col-md-12 col-md-12 d-block mx-auto">
 							<div class="card mb-0">
 								<div class="card-header">
-									<h3 class="card-title a">Login to your Account</h3>
+									<h3 class="card-title a">تسجيل الدخول إلى حسابك</h3>
                                     @if (Session::haS('message'))
                                         <h3 class="card-titel alert alert-danger"> {{session('message')}} </h3>
                                     @endif
@@ -68,25 +68,25 @@
                                         @csrf
                                       <div class="card-body">
                                         <div class="form-group">
-                                            <label class="form-label text-dark">Email address</label>
-                                            <input type="email" name="user_email" class="form-control" placeholder="Enter email">
+                                            <label class="form-label text-dark">عنوان البريد الإلكتروني</label>
+                                            <input type="email" name="user_email" class="form-control" placeholder="عنوان البريد الإلكتروني">
                                         </div>
                                         <div class="form-group">
-                                            <label class="form-label text-dark">Password</label>
-                                            <input type="password" name="user_pass" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                            <label class="form-label text-dark">كلمة المرور</label>
+                                            <input type="password" name="user_pass" class="form-control" id="exampleInputPassword1" placeholder="كلمة المرور">
                                         </div>
                                         <div class="form-group">
                                             <label class="custom-control custom-checkbox">
-                                                <a href="forgot-password.html" class="float-right small text-dark mt-1">I forgot password</a>
+                                                <a href="forgot-password.html" class="float-right small text-dark mt-1">لقد نسيت كلمة المرور</a>
                                                 <input type="checkbox" class="custom-control-input">
-                                                <span class="custom-control-label text-dark">Remember me</span>
+                                                <span class="custom-control-label text-dark">تذكرنى</span>
                                             </label>
                                         </div>
                                         <div class="form-footer mt-2">
                                             <input type="submit" class="btn btn-primary btn-block"value="SignIn">
                                         </div>
                                         <div class="text-center  mt-3 text-dark">
-                                            Don't have account yet? <a href="{{route('register')}}">SignUp</a>
+                                            ليس لديك حساب حتى الآن؟ <a href="{{route('register')}}">اشتراك</a>
                                         </div>
                                     </div>
                                     </form>

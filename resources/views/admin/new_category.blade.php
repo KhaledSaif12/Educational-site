@@ -14,7 +14,7 @@
                         <div class="form-group col-md-6">
                             <div class="form-group">
                                 <label class="form-label" for="exampleInputEmail1">اسم الدورة</label>
-                                <input type="text" name="name" class="form-control" id="name1"  placeholder="First Name">
+                                <input type="text" name="name" class="form-control" id="name1"  placeholder="اسم الدورة">
                             </div>
                         </div>
                         <div class="form-group col-md-6">
@@ -30,7 +30,7 @@
                     </div>
                     <div class="form-group">
                         <label class="col-form-label">وصف التصنيف</label>
-                        <textarea name="description" class="form-control"  rows="4" placeholder="Address.."></textarea>
+                        <textarea name="description" class="form-control"  rows="4" placeholder="وصف التصنيف"></textarea>
                     </div>
                     
                    

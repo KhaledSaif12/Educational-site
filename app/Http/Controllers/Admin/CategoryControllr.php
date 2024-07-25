@@ -34,4 +34,29 @@ class CategoryControllr extends Controller
         return redirect()->pack();
 
     }
+    public function edit($id){
+        $category = Catgory::findOrFail($id);
+        $main_cate = Catgory::select('id', 'name')->where('parent', 0)->get();
+        return view('admin.edit_category')->with('category', $category)->with('cats', $main_cate);
+    }
+
+    public function update(Request $request, $id){
+        $catgory = Catgory::findOrFail($id);
+        $catgory->name = $request->name;
+        $catgory->description = $request->description;
+        $catgory->parent = $request->parent;
+        $catgory->user_id = Auth::user()->id;
+
+        if ($catgory->save()) {
+            return redirect()->route('all_category');
+        }
+
+        return redirect()->back();
+    }
+
+    public function destroy($id){
+        $catgory = Catgory::findOrFail($id);
+        $catgory->delete();
+        return redirect()->route('all_category');
+    }
 }

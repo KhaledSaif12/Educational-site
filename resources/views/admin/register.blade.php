@@ -54,38 +54,38 @@
 		<div class="page page-h">
 			<div class="page-content z-documentation-10">
 				<div class="container">
-                    <form method="POST" action="{{route('login')}}">
+                    <form method="POST" action="{{route('save_user_old')}}">
                         @csrf
                         <div class="row">
                             <div class="col-xl-4 col-md-12 col-md-12 d-block mx-auto">
                                 <div class="card mb-xl-0">
                                     <div class="card-header">
-                                        <h3 class="card-title">Register</h3>
+                                        <h3 class="card-title">يسجل</h3>
                                     </div>
                                     <div class="card-body">
                                         <div class="form-group">
-                                            <label class="form-label text-dark">Name</label>
-                                            <input type="text" name="user_name" class="form-control" placeholder="Enter name">
+                                            <label class="form-label text-dark">أسم المسنخدم</label>
+                                            <input type="text" name="user_name" class="form-control" placeholder="أسم المسنخدم">
                                         </div>
                                         <div class="form-group">
-                                            <label class="form-label text-dark">Email address</label>
-                                            <input type="email" name="user_email" class="form-control" placeholder="Enter email">
+                                            <label class="form-label text-dark">عنوان البريد الإلكتروني</label>
+                                            <input type="email" name="user_email" class="form-control" placeholder="عنوان البريد الإلكتروني">
                                         </div>
                                         <div class="form-group">
-                                            <label class="form-label text-dark">Password</label>
-                                            <input type="password" name="user_pass" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                            <label class="form-label text-dark">كلمة المرور	</label>
+                                            <input type="password" name="user_pass" class="form-control" id="exampleInputPassword1" placeholder="كلمة المرور">
                                         </div>
                                         <div class="form-group">
                                             <label class="custom-control custom-checkbox">
                                                 <input type="checkbox" class="custom-control-input">
-                                                <span class="custom-control-label text-dark">Agree the <a href="terms.html">terms and policy</a></span>
+                                                <span class="custom-control-label text-dark">توافق على<a href="terms.html">الشروط والسياسة</a></span>
                                             </label>
                                         </div>
                                         <div class="form-footer mt-2">
                                             <input type="submit" class="btn btn-primary btn-block" value="Create New Account">
                                         </div>
                                         <div class="text-center  mt-3 text-dark">
-                                            Already have account?<a href="{{route('login')}}">SignIn</a>
+											هل لديك حساب بالفعل؟<a href="{{route('login')}}">تسجيل الدخول</a>
                                         </div>
 
                                     </div>

@@ -14,7 +14,7 @@
                         <div class="form-group col-md-6">
                             <div class="form-group">
                                 <label class="form-label" for="exampleInputEmail1">عنوان الدورة</label>
-                                <input type="text" name="arttitle" class="form-control" id="name1"  placeholder="First Name">
+                                <input type="text" name="arttitle" class="form-control" id="name1"  placeholder="عنوان الدورة">
                             </div>
                         </div>
                         <div class="form-group col-md-6">
