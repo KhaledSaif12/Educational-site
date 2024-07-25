@@ -117,18 +117,18 @@
 						<li class="slide">
 							<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fe fe-airplay"></i><span class="side-menu__label">أدراة الدورات</span><i class="angle fa fa-angle-right"></i></a>
 							<ul class="slide-menu">
-						
+								@role('super_admin')
 								<li><a class="slide-item" href="{{route('addcate')}}">دورة جديدة</a></li>
-								
+								@endrole
 								<li><a class="slide-item" href="{{route('all_category')}}">قائمة الدورات</a></li>
 							</ul>
 						</li>
 						<li class="slide">
 							<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fe fe-airplay"></i><span class="side-menu__label">محتويات الدورات</span><i class="angle fa fa-angle-right"></i></a>
 							<ul class="slide-menu">
-							
+								@role('super_admin')
 								<li><a class="slide-item" href="{{route('add_articles')}}">محتوى جديدة</a></li>
-						
+								@endrole
 								<li><a class="slide-item" href="{{route('list_article')}}">قائمة محتويات الدورات</a></li>
 							</ul>
 						</li>
