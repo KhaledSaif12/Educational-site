@@ -34,6 +34,7 @@ class CategoryControllr extends Controller
         return redirect()->pack();
 
     }
+
     public function edit($id){
         $category = Catgory::findOrFail($id);
         $main_cate = Catgory::select('id', 'name')->where('parent', 0)->get();
@@ -59,4 +60,5 @@ class CategoryControllr extends Controller
         $catgory->delete();
         return redirect()->route('all_category');
     }
+    
 }

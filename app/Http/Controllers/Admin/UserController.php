@@ -7,7 +7,7 @@ use App\Models\Role;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
-use Dotenv\Validator;
+use Illuminate\Validation\Validator;
 use Dotenv\Password;
 use Illuminate\Support\Facades\Auth;
 

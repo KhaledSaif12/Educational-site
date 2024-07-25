@@ -21,8 +21,8 @@
                             <label for="inputState" class="col-form-label">التفرع</label>
                             <select id="inputState" name="parent" class="form-control">
                                 <option value="0" >تصنيف رئيسي</option>
-                                @foreach($cats as $catparent)
-                                 <option value="{{$catparent->id}}">{{$catparent->name}}</option>
+                                @foreach($cats as $parentcat)
+                                <option value="{{$parentcat->id}}">{{$parentcat->name}}</option>
                                  @endforeach
                             </select>
                         </div>

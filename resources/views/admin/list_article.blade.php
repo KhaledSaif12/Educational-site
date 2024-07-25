@@ -33,6 +33,7 @@
                             <td>{{ $item->views }}</td>
                             <td>{{ $item->created_at }}</td>
                             <td>
+                            
                                 <div class="but-group mb-1">
                                     <a href="{{ route('edit_article', $item->id) }}" class="btn btn-outline-success btn-pill">تعديل</a>
                                     <form action="{{ route('delete_article', $item->id) }}" method="POST" style="display:inline;">
@@ -41,6 +42,7 @@
                                         <button type="submit" class="btn btn-outline-danger btn-pill">حذف</button>
                                     </form>
                                 </div>
+                               
                             </td>
                         </tr>
                     @endforeach

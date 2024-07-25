@@ -5,13 +5,21 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Validator;
 use App\Models\User;
 
 class UserProfileController extends Controller
 {
     // عرض صفحة التعديل
-    public function edit($id)
+    public function edit()
     {
+        $id = Auth::user()->id;
+        $user = User::findOrFail($id);
+        return view('admin.edit_user', compact('user'));
+    }
+    public function editid($id)
+    {
+        
         $user = User::findOrFail($id);
         return view('admin.edit_user', compact('user'));
     }

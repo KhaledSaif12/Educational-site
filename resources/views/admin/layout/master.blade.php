@@ -14,7 +14,7 @@
 		<link rel="shortcut icon" type="image/x-icon" href="{{asset('admin/assets/images/brand/favicon.ico')}}" />
 
 		<!-- Title -->
-		<title>Eudica - Online Education & Learning Courses HTML CSS Responsive Template</title>
+		<title>خالد سيف - دورات التعليم والتعلم عبر الإنترنت </title>
 
 		<!-- Bootstrap css -->
 		<link href="{{asset('admin/assets/plugins/bootstrap-4.3.1/css/bootstrap.min.css')}}" rel="stylesheet" />
@@ -85,14 +85,8 @@
 										<img src="{{asset('admin/assets/images/users/male/25.jpg')}}" alt="profile-img" class="avatar avatar-md brround">
 									</a>
 									<div class="dropdown-menu dropdown-menu-left dropdown-menu-arrow ">
-										<a class="dropdown-item" href="profile.html">
+										<a class="dropdown-item" href="{{route('edit_user')}}">
 											<i class="dropdown-icon icon icon-user"></i> My Profile
-										</a>
-										<a class="dropdown-item" href="emailservices.html">
-											<i class="dropdown-icon icon icon-speech"></i> Inbox
-										</a>
-										<a class="dropdown-item" href="editprofile.html">
-											<i class="dropdown-icon  icon icon-settings"></i> Account Settings
 										</a>
 										<a class="dropdown-item" href="{{route('logout')}}">
 											<i class="dropdown-icon icon icon-power"></i> Log out
@@ -123,14 +117,18 @@
 						<li class="slide">
 							<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fe fe-airplay"></i><span class="side-menu__label">أدراة الدورات</span><i class="angle fa fa-angle-right"></i></a>
 							<ul class="slide-menu">
+						
 								<li><a class="slide-item" href="{{route('addcate')}}">دورة جديدة</a></li>
+								
 								<li><a class="slide-item" href="{{route('all_category')}}">قائمة الدورات</a></li>
 							</ul>
 						</li>
 						<li class="slide">
 							<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fe fe-airplay"></i><span class="side-menu__label">محتويات الدورات</span><i class="angle fa fa-angle-right"></i></a>
 							<ul class="slide-menu">
+							
 								<li><a class="slide-item" href="{{route('add_articles')}}">محتوى جديدة</a></li>
+						
 								<li><a class="slide-item" href="{{route('list_article')}}">قائمة محتويات الدورات</a></li>
 							</ul>
 						</li>

@@ -21,12 +21,13 @@
                 <tbody>
                     @foreach ($all_category as $item)
                     <tr>
-                        <th>{{ $item->id }}</th>
+                        <th>{{ $loop->iteration }}</th>
                         <td>{{ $item->name }}</td>
                         <td>{{ $item->description }}</td>
                         <td>{{ $item->parent }}</td>
                         <td>{{ $item->created_at }}</td>
                         <td>
+                           
                             <div class="but-group mb-1">
                                 <a href="{{ route('edit_category', $item->id) }}" class="btn btn-outline-success btn-pill">تعديل</a>
                                 <form action="{{ route('delete_category', $item->id) }}" method="POST" style="display:inline;">
@@ -35,6 +36,7 @@
                                     <button type="submit" class="btn btn-outline-danger btn-pill">حذف</button>
                                 </form>
                             </div>
+                          
                         </td>
                     </tr>
                     @endforeach

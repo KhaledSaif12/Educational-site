@@ -10,13 +10,13 @@ use App\Models\Role;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('/admin.login');
+    return view('admin.login');
 });
 Route::group(['middleware'=>'auth'], function () {
 
     Route::get('/new_cate', [CategoryControllr::class, 'create'])->name('addcate');
     Route::get('/list_cate', [CategoryControllr::class, 'index'])->name('all_category');
-    Route::post('/save_cate', [CategoryControllr::class, 'store']);
+    Route::post('/save_cate', [CategoryControllr::class, 'store'])->name('save_cate');
     Route::get('/admin/categories/edit/{id}', [CategoryControllr::class, 'edit'])->name('edit_category');
     Route::put('/admin/categories/update/{id}', [CategoryControllr::class, 'update'])->name('update_category');
     Route::delete('/admin/categories/{id}', [CategoryControllr::class, 'destroy'])->name('delete_category');
@@ -32,13 +32,13 @@ Route::group(['middleware'=>'auth'], function () {
     Route::post('/password/update', [UserProfileController::class, 'updatePassword'])->name('password.update');
 
 
-    Route::get('/admin/users/edit/{id}', [UserProfileController::class, 'edit'])->name('edit_user');
+    Route::get('/admin/users/edit/{id}', [UserProfileController::class, 'editid'])->name('edit_userID');
     Route::post('/admin/users/update/{id}', [UserProfileController::class, 'update'])->name('update_user');
     Route::delete('/admin/users/{id}', [UserProfileController::class, 'destroy'])->name('de_user');
 
     Route::get('/admin/articles/edit/{id}', [ArticleController::class, 'edit'])->name('edit_article');
-    Route::post('/admin/articles/update/{id}', [ArticleController::class, 'update'])->name('update_article');
-    Route::delete('/admin/articles/{id}', [ArticleController::class, 'destroy'])->name('delete_article');
+Route::post('/admin/articles/update/{id}', [ArticleController::class, 'update'])->name('update_article');
+Route::delete('/admin/articles/{id}', [ArticleController::class, 'destroy'])->name('delete_article');
 
 
 

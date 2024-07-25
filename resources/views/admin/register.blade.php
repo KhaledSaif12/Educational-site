@@ -61,7 +61,19 @@
                                 <div class="card mb-xl-0">
                                     <div class="card-header">
                                         <h3 class="card-title">يسجل</h3>
+										@if($errors->any())
+											<div class=" alert alert-danger">
+												@foreach ($errors->all() as $error)
+												<p>
+													{{$error}}
+												</p>
+													
+												@endforeach
+
+											</div>
+										@endif
                                     </div>
+
                                     <div class="card-body">
                                         <div class="form-group">
                                             <label class="form-label text-dark">أسم المسنخدم</label>

@@ -29,7 +29,7 @@
                         
                             <td>
                                 <div class="but-group mb-1">
-                                    <a href="{{ route('edit_user', $users->id) }}" class="btn btn-outline-warning btn-pill">تعديل</a>
+                                    <a href="{{ route('edit_userID', $users->id) }}" class="btn btn-outline-warning btn-pill">تعديل</a>
                                     <form action="{{ route('de_user', $users->id) }}" method="POST" onsubmit="return confirm('Are you sure?');">
                                         @csrf
                                         @method('DELETE')

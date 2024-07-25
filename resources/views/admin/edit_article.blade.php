@@ -1,9 +1,11 @@
 @extends('admin.layout.master')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">تعديل محتويات الدورة</h3>
+    </div>
+        <div class="card-body">
             <form action="{{ route('update_article', $article->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
@@ -31,5 +33,5 @@
             </form>
         </div>
     </div>
-</div>
+
 @endsection
