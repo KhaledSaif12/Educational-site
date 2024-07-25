@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Generation Time: 24 يوليو 2024 الساعة 22:24
+-- Generation Time: 25 يوليو 2024 الساعة 20:49
 -- إصدار الخادم: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -44,7 +44,9 @@ CREATE TABLE `articles` (
 --
 
 INSERT INTO `articles` (`id`, `title`, `content`, `image`, `views`, `user_id`, `catgory_id`, `created_at`, `updated_at`) VALUES
-(1, 'nnnnn', 'kjhvc', '1721717571.jpg', 0, 1, 2, '2024-07-23 13:52:51', '2024-07-23 13:52:51');
+(2, 'تصميم وتطوير تطبيقات الموبايل باستخدام Flutter', 'إعداد بيئة التطوير:\r\n\r\nتثبيت Flutter وإعداد بيئة العمل.\r\nمقدمة عن Visual Studio Code وAndroid Studio.\r\nالمحور 2: أساسيات Flutter\r\nالودجت (Widgets):\r\n\r\nفهم أنواع الودجت الأساسية في Flutter.\r\nكيفية بناء شاشات باستخدام الودجت المتعددة.\r\nالتخطيط والتصميم (Layout & Design):\r\n\r\nاستخدام الأدوات المساعدة لبناء تصاميم متجاوبة.\r\nبناء تصميمات ديناميكية باستخدام الـFlexbox وGrid.\r\nالمحور 3: التفاعل وإدارة الحالة\r\nالتفاعل مع المستخدم (User Interaction):\r\n\r\nالتعامل مع الأحداث والعمليات التفاعلية.\r\nتصميم الأزرار، القوائم، وأشرطة التمرير.', '1721881241.png', 0, 1, 3, '2024-07-25 11:20:41', '2024-07-25 11:20:41'),
+(3, 'برمجة تطبيقات الموبايل باستخدام Kotlin', 'تهدف هذه الدورة إلى تعريف المتعلمين بأساسيات برمجة تطبيقات الأندرويد باستخدام لغة البرمجة Kotlin، والتي أصبحت الخيار الأساسي لتطوير تطبيقات الأندرويد. ستغطي الدورة كيفية بناء واجهات مستخدم فعّالة، والعمل مع البيانات، واستخدام مكتبات مثل Jetpack لتحقيق الأداء الأفضل.', '1721881527.png', 0, 1, 3, '2024-07-25 11:25:27', '2024-07-25 11:25:27'),
+(4, 'تطوير مواقع ويب تفاعلية باستخدام ReactJS', 'تهدف هذه الدورة إلى تزويد المتعلمين بالمعرفة والمهارات اللازمة لتطوير مواقع وتطبيقات ويب تفاعلية باستخدام مكتبة ReactJS، وهي إحدى المكتبات الأكثر شيوعًا لبناء واجهات المستخدم في تطبيقات الويب. ستتعلم كيفية إنشاء مكونات تفاعلية، وإدارة الحالة باستخدام React، والتكامل مع RESTful APIs لإنشاء تطبيقات ويب ديناميكية وعملية.\r\nالمحور 1: مقدمة إلى ReactJS\r\n\r\nما هي ReactJS؟\r\n\r\nنظرة عامة على ReactJS، وفهم كيفية تطورها لتصبح أحد الأدوات الأكثر استخدامًا في بناء تطبيقات الويب الحديثة.\r\nمقارنة بين ReactJS وأطر عمل أخرى مثل Angular وVue.js لفهم مميزاتها وعيوبها.\r\nإعداد بيئة التطوير:\r\n\r\nتثبيت Node.js وnpm لإدارة الحزم والمكتبات.\r\nإعداد مشروع React جديد باستخدام Create React App وفهم بنية المشروع.\r\nالمحور 2: بناء واجهات المستخدم بالمكونات (Components)\r\n\r\nالمكونات في React:\r\n\r\nإنشاء مكونات React الأساسية وفهم كيفية إعادة استخدامها.\r\nالفرق بين المكونات الوظيفية والمكونات القائمة على الفئات (Class Components) وكيفية استخدام Hooks لتحسين الأداء.\r\nالخواص والحالة (Props and State):\r\n\r\nالتعامل مع الخواص (Props) لتمرير البيانات بين المكونات.\r\nإدارة الحالة (State) داخل المكونات وفهم دورة حياة المكون.\r\nالمحور 3: التفاعل مع المستخدم وإدارة الأحداث\r\n\r\nالتعامل مع الأحداث (Event Handling):\r\n\r\nإدارة الأحداث التفاعلية مثل النقر على الأزرار، وتغيير المدخلات.\r\nاستخدام الفعاليات المخصصة لتحسين تجربة المستخدم.', '1721881854.png', 0, 1, 4, '2024-07-25 11:30:54', '2024-07-25 11:30:54');
 
 -- --------------------------------------------------------
 
@@ -79,7 +81,7 @@ CREATE TABLE `cache_locks` (
 CREATE TABLE `catgories` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `name` varchar(255) NOT NULL,
-  `description` varchar(255) NOT NULL,
+  `description` text NOT NULL,
   `parent` int(11) NOT NULL DEFAULT 0,
   `status` tinyint(1) NOT NULL DEFAULT 1,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -92,7 +94,8 @@ CREATE TABLE `catgories` (
 --
 
 INSERT INTO `catgories` (`id`, `name`, `description`, `parent`, `status`, `created_at`, `updated_at`, `user_id`) VALUES
-(2, 'خالد سيف', 'jjjjjjjjjjjjjjj', 0, 1, '2024-07-23 13:27:23', '2024-07-23 13:27:23', 1);
+(3, 'تصميم وتطوير تطبيقات الموبايل', 'تستهدف هذه الدورة الأفراد الذين يرغبون في تعلم كيفية تصميم وتطوير تطبيقات الموبايل بفعالية باستخدام إطار العمل Flutter. تعتبر Flutter إحدى الأدوات الرائدة في تطوير التطبيقات متعددة المنصات (iOS وAndroid) بقاعدة كود واحدة، وتساعد في إنشاء تطبيقات ذات أداء عالي وتصميم جذاب.', 0, 1, '2024-07-25 11:16:45', '2024-07-25 11:16:45', 1),
+(4, 'تطوير الويب (WEB)', 'مقارنة بين ReactJS وأطر عمل أخرى مثل Angular وVue.js لفهم مميزاتها وعيوبها.', 0, 1, '2024-07-25 11:28:06', '2024-07-25 11:28:06', 1);
 
 -- --------------------------------------------------------
 
@@ -240,7 +243,6 @@ CREATE TABLE `roles` (
 
 INSERT INTO `roles` (`id`, `name`, `display_name`, `description`, `created_at`, `updated_at`) VALUES
 (1, 'super_admin', 'site adminstration', NULL, '2024-07-23 21:48:43', '2024-07-23 21:48:43'),
-(2, 'content_manager', 'manager', NULL, '2024-07-23 21:48:43', '2024-07-23 21:48:43'),
 (3, 'user', 'user', NULL, '2024-07-23 21:48:43', '2024-07-23 21:48:43');
 
 -- --------------------------------------------------------
@@ -261,7 +263,7 @@ CREATE TABLE `role_user` (
 
 INSERT INTO `role_user` (`role_id`, `user_id`, `user_type`) VALUES
 (1, 1, 'App\\Models\\User'),
-(3, 6, 'App\\Models\\User');
+(3, 8, 'App\\Models\\User');
 
 -- --------------------------------------------------------
 
@@ -283,8 +285,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('OH0XHUCbcD4fs4iAXuRvVbjcpv0dzAbnhWWmkq5H', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiYlRuTG5ZOG56ZUtJSmpHYlRhT285U0c3MzRSSktET3JKcjV2TTN5dyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9saXN0X3VzZXIiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO30=', 1721835598),
-('waDQzZT6y6nNs9mY0FaUg3CdnrLXjPzr2sL8Nj17', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoibzRjT2pjR2FoUXBQY09ZcVhWRXhYcklETFU4ckk1d0NFVG1CY21DRiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzQ6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9wcm9maWxlL2VkaXQiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO30=', 1721852109);
+('rAD4jKa5ooXKCMZ4Ii78R7L321e0NC0fKWHFdRAL', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiTjc5RkJ6ZVg0cFo0NEJyZnhqWmRlMjczcWJOTFRlaDNMT1NmM0VuZyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7fQ==', 1721931967);
 
 -- --------------------------------------------------------
 
@@ -308,8 +309,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'khaled', 'khaled@gmail.com', NULL, '$2y$12$d.EAqU43JE3crDRQPeb/ROcp0Ovar1sOOfAGODjXc6ZjJVGjudK0y', NULL, '2024-07-23 07:14:37', '2024-07-23 07:14:37'),
-(6, 'khaled2', 'khaled2@gmail.com', NULL, '$2y$12$v0qccunIk7GEGZ7o048anOSGk351Qpb/QOrULmGNtIEnZm5sNB2uG', NULL, '2024-07-24 01:25:40', '2024-07-24 01:25:40');
+(1, 'خالد سيف', 'khaled@gmail.com', NULL, '$2y$12$PgHqCTw0J5b2TyswHp6aEe9LhDdKs0oqINEErFAS.tKtXNHxB2dtS', NULL, '2024-07-23 07:14:37', '2024-07-25 14:21:31'),
+(8, 'khaled3', 'khaled3@gmail.com', NULL, '$2y$12$KTs3H8Xjj70LomZ2mJMF4.Wg8PpwQ2.N0Wn3Zgv2FCopZuO97lZ5O', NULL, '2024-07-25 11:31:44', '2024-07-25 11:31:44');
 
 --
 -- Indexes for dumped tables
@@ -431,13 +432,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `articles`
 --
 ALTER TABLE `articles`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `catgories`
 --
 ALTER TABLE `catgories`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -473,7 +474,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- قيود الجداول المحفوظة
